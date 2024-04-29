@@ -24,7 +24,7 @@ export class Particle {
         this.maxLength = Math.floor(Math.random() * 200 + 10);
         this.angle = 0;
         this.timer = this.maxLength * 2;
-        this.colors = ['#712C83', '#79358A', '#79358A', '#9A6EA6', '#A883B1'];
+        this.colors = ['#712C83', '#79358A', '#79358A', '#9A6EA6', '#A883B1', '#19416E', '#103967', '#1A3452', '#3A5B82', '#5A7CA2'];
         this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
 
     }
