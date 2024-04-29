@@ -1,0 +1,18 @@
+<div id="about" class="container">
+    <div class="top-row">
+        <img data-aos="fade-right" src="./assets/img/aboutphoto.min.webp" alt="">
+        <div data-aos="fade-left" class="text-box">
+            <h2>About Me.</h2>
+            <p>"I'm a food lover passionate about software development and logical thinking. My mindset is to give my best, collaborate with my team, and be ready to face new challenges."</p>
+        </div>
+    </div>
+    <div class="bottom-row">
+        <div  data-aos="zoom-in-up"  *ngFor="let i of [0, 1, 2, 3]" class="bottom-box">
+            <div class="img-container"><img src="{{ aboutBox[i]['path'] }}"></div>
+            <h4>{{ aboutBox[i]['h4'] }}</h4>
+            <p>{{ aboutBox[i]['p'] }}</p>
+        </div>
+       
+  
+    </div>
+</div>

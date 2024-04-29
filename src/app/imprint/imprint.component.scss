@@ -1,0 +1,48 @@
+.container {
+    padding-top: 86px;
+}
+
+.marginLeftRight {
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+// Responsive upon 1000px height
+
+@media (min-height: 1000px) {
+   
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 2em;
+    }
+}
+
+// Responsive under 800px
+
+@media (max-width: 800px) {
+    .container {
+        margin-left: 80px !important;
+        margin-right: 80px !important;
+    }
+}
+
+// Responsive under 500px
+
+@media (max-width: 500px) {
+    .container {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}

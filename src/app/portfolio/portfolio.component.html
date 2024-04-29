@@ -1,0 +1,58 @@
+<div class="container" id="portfolio">
+    <p data-aos="zoom-in">My Work</p>
+    <div data-aos="zoom-in" class="filter-box">
+        <div (click)="getAll()"  (click)="toggleAllIsActive()" [@toggle]="allIsActive" class="filter-element">All</div>
+        <div (click)="getAngular()" (click)="toggleAngularIsActive()" [@toggle]="angularIsActive" class="filter-element">Angular</div>
+        <div (click)="getJavascript()" (click)="toggleJavascriptIsActive()" [@toggle]="javascriptIsActive" class="filter-element">Java Script</div>
+    </div>
+    <div class="projects-box">
+        <div data-aos="fade-right" class="project-card" *ngIf="javascript" @fadeInOutLeft>
+            <img src="/assets/img/el_pollo_loco.min.webp">
+            <div class="dialog-img">
+                <p class="p-rosa">{{ projects[0].title }}</p>
+                <p class="p-black" >{{ projects[0].sentence }}</p>
+                <div class="button-cnt">
+                    <a target="_blank" href="https://el-pollo-loco.daniel-pozzan.com"><button>Try out</button></a>
+                    <a target="_blank" href="https://github.com/pozzandaniel/El-pollo-loco"><button>Github</button></a>
+                </div>            
+            </div>
+        </div>
+        <div  data-aos="fade-left" class="project-card" *ngIf="javascript" @fadeInOutLeft>
+            <img src="/assets/img/join.min.webp">
+            <div class="dialog-img">
+                <p class="p-rosa">{{ projects[1].title }}</p>
+                <p class="p-black" >{{ projects[1].sentence }}</p>
+                <div class="button-cnt">
+                    <a target="_blank" href="https://join.daniel-pozzan.com"><button>Try out</button></a>
+                    <a target="_blank" href="https://github.com/pozzandaniel/Join"><button>Github</button></a>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <div class="projects-box">
+        <div data-aos="fade-right" class="project-card" *ngIf="angular" @fadeInOutRight>
+            <img src="/assets/img/ringfire.min.webp">
+            <div class="dialog-img">
+                <p class="p-rosa">{{ projects[2].title }}</p>
+                <p class="p-black" >{{ projects[2].sentence }}</p>
+                <div class="button-cnt">
+                    <a target="_blank" href="https://ring-of-fire.daniel-pozzan.com"><button>Try out</button></a>
+                    <a target="_blank" href="https://github.com/pozzandaniel/Ring-of-fire"><button>Github</button></a>
+                </div>
+
+            </div>
+        </div>
+        <div data-aos="fade-left" class="project-card" *ngIf="angular" @fadeInOutRight>
+            <img src="/assets/img/prtfolio.min.webp">
+            <div class="dialog-img">
+                <p class="p-rosa">{{ projects[3].title }}</p>
+                <p class="p-black" >{{ projects[3].sentence }}</p>
+                <div class="button-cnt">
+                    <a href="https://daniel-pozzan.com"><button>Try out</button></a>
+                    <a target="_blank" href="https://github.com/pozzandaniel/Portfolio"><button>Github</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div  id="skills-container">
+    <p data-aos="zoom-in-up" >MY Skills</p>
+    <div class="skills-table">
+        <div class="skills-row">
+            <div *ngFor="let i of [0 , 3, 6]"  class="skill-box" data-aos = "fade-right">
+                <div  class="logo-container" ><img src="./assets/img/icons/{{ logos[i] }}" alt=""></div>
+                <p>{{ skills[i] }}</p>
+            </div>
+        </div>
+        <div class="skills-row"  >
+            <div *ngFor="let i of [1, 4, 7]"  class="skill-box" data-aos="zoom-in" >
+                <div  class="logo-container"><img src="./assets/img/icons/{{ logos[i] }}" alt=""></div>
+                <p>{{ skills[i] }}</p>
+            </div>
+        </div>
+        <div  class="skills-row">
+            <div *ngFor="let i of [2, 5, 8]"  class="skill-box" data-aos="fade-left">
+                <div class="logo-container"><img src="./assets/img/icons/{{ logos[i] }}" alt=""></div>
+                <p>{{ skills[i] }}</p>
+            </div>
+        </div>
+
+    </div>
+ 
+    
+</div>

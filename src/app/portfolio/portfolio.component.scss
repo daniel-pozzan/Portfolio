@@ -1,0 +1,156 @@
+.container{
+    overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    p{
+        margin-top: 0;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 40px;
+        color: white;
+    }
+
+    .filter-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+       
+        .filter-element{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 128px;
+            height: 70px;
+            border: 2px solid #FA2759;
+            font-family: 'Inter';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 20px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .projects-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .project-card{
+            position: relative;
+            background-color: white;
+            margin: 20px;
+            width: 442px;
+            height: 367px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+            }
+
+            .dialog-img{
+                position: unset ;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .p-rosa{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #FA2759;
+                }
+
+                .p-black{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: black;
+                    text-align: center;
+                }
+
+                .button-cnt {
+                    display: flex;
+                }
+
+                button{
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    margin-top: 30px;
+                    width: 128px;
+                    height: 60px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #FB426E;
+                    background: #FFFFFF;
+                    border: 1px solid #FA2759;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #FA2759;
+                        color: white;
+                    }
+
+                }
+            }
+
+            &:hover .dialog-img{
+                background-color: rgba(255, 255, 255, 0.6);
+                position: absolute;
+            }
+        }
+    }
+}
+
+// Responsive upon 980px Width 
+// @media (min-width: 980px) {
+//     .projects-box {
+//         height: 407px;
+//     }
+// }
+
+// Responsive under 650px
+@media (max-width: 650px){
+    .container {
+        p {
+            font-size: 32px;
+        }
+
+        .filter-box {
+            .filter-element{
+                width: 91px;
+                height: 50px;
+                font-size: 16px;
+
+            }
+
+        }
+
+        .projects-box {
+            .project-card {
+                width: 275px;
+                height: 228px;
+            }
+        }
+    }
+}

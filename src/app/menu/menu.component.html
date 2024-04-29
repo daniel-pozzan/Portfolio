@@ -1,0 +1,15 @@
+
+<nav [class.marginLeftRight] = "borderMode">
+    <a href="#home"><img (mouseover)="purpleColor()" (mouseleave)="whiteColor()" id="logoId" class="logo" src="./assets/img/{{ img }}" alt=""></a>
+    <ul id="listCase" class="list-case-responsive d-none">
+        <li><a href="#home" >HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+    </ul>
+    <ul class="list-case">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+    </ul>
+    <img (click)="openMenu()" class="menu-icon" id="menuIcon" src="./assets/img/icons/menu-icon.png" alt="">
+</nav>

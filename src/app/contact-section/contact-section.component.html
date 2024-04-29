@@ -1,0 +1,20 @@
+<div id="contact" class="container">
+    <div class="contact-headline">
+        <h2 data-aos="flip-left">Contact me.</h2>
+        <p data-aos="flip-right">Get in touch via the form below, or by emailing <span>mail@daniel-pozzan.com</span></p>
+    </div>
+    <form action="https://daniel-pozzan.com/send_mail.php" method="POST">
+        
+        <label data-aos="fade-right" for="name">Name</label>
+        <input name="name" data-aos="fade-right" id="name" type="text" placeholder="Enter your name" required>
+        <label data-aos="fade-left" for="email">Email adress</label>
+        <input data-aos="fade-left" id="email" type="email" placeholder="Enter your Email adress" required>
+        <label data-aos="fade-right" for="message" >Message</label>
+        <textarea name="message" data-aos="fade-right" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+        <div data-aos="fade-left" class="button-box">
+            <button (click)="sendSuccess()" type="submit">Send</button>
+        </div>
+    </form>
+    <p id="sendedEmail" class="sended_email d-none">Thank you for your message! I will answer you as soon as possible</p>
+
+</div>

@@ -1,0 +1,66 @@
+.container {
+    padding-top: 86px;
+}
+
+.marginLeftRight {
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+ul {
+    padding-inline-start: 20px;
+}
+
+// Responsive upon 1000px Width
+
+@media (min-height: 1000px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    li {
+        font-size: 1.5em;
+    }
+}
+
+// Responsive under 1000px Width
+
+@media (max-width: 1000px){
+    .container {
+        margin-right: 80px !important;
+        margin-left: 80px !important;
+    }
+}
+
+// Responsive under 700px Width
+
+@media (max-width: 700px) {
+    .container {
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+    }
+}
+
+// Responsive under 500px Width
+
+@media (max-width: 500px) {
+   h1 {
+    font-size: 1.5em;
+   }
+
+   h2 {
+    font-size: 1.2em;
+   }
+}
