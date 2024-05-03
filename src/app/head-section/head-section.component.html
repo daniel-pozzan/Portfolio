@@ -2,18 +2,15 @@
     <div id="headSection" class="top-case">
         <div @fadeIn class="left-box" >
             <p  *ngIf="visible" class="left">Hi,<br> I'm <span class="purple"> Daniel</span> Pozzan<br> Front End <span class="bluegreen">developer</span></p>
-            <a    href="#contact"><button *ngIf="visible" class="left" >Contact me</button></a>
+            <a href="#contact" *ngIf="visible" class="neon-button">Contact me</a>
         </div>
         <div  class="right-box">
             <img src="./assets/img/headphoto.webp" alt="">
         </div>
         
     </div>
-    <div  class="expand-button">
-        <a href="#skills-container"><img (mouseover)="bluegreenColor()" (mouseleave)="whiteColor()" src="./assets/img/icons/{{ img }}" alt=""></a>
-        
-    </div>
+    <a href="#skills-container" class="arrow-button"></a>
 
-    <canvas id="canvas"  ></canvas>
+    <canvas id="canvas"></canvas>
 
 </div>
