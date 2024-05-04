@@ -13,6 +13,9 @@ import { FooterSectionComponent } from './footer-section/footer-section.componen
 import { ImprintComponent } from './imprint/imprint.component';
 import { ContainerComponent } from './container/container.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { FormsModule } from '@angular/forms'; // Import FormsModule here
+import { HttpClientModule } from '@angular/common/http'; // Import here
+
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

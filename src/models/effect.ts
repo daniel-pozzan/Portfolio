@@ -26,9 +26,9 @@ export class Effect {
         this.debug = false;
         this.init();
 
-        window.addEventListener('keydown', e => {
-            if(e.key === 'd') this.debug = !this.debug;
-        })
+        // window.addEventListener('keydown', e => {
+        //     if(e.key === 'd') this.debug = !this.debug;
+        // })
 
     }
 
