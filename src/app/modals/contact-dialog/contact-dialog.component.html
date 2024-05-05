@@ -1,0 +1,14 @@
+<!-- custom-dialog.component.html -->
+<div class="contact-dialog" *ngIf="isVisible" (click)="close()">
+    <div class="contact-dialog-content" (click)="$event.stopPropagation()">
+      <h2>{{ title }}</h2>
+      <p>{{ message }}</p>
+      <button class="glow-effect" (click)="close()">
+        Close 👋🏻
+        <svg class="glow-container">
+            <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+            <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+    </div>
+  </div>

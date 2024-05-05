@@ -14,7 +14,8 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { ContainerComponent } from './container/container.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule here
-import { HttpClientModule } from '@angular/common/http'; // Import here
+import { HttpClientModule } from '@angular/common/http';
+import { ContactDialogComponent } from './modals/contact-dialog/contact-dialog.component'; // Import here
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http'; // Import here
     FooterSectionComponent,
     ImprintComponent,
     ContainerComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    ContactDialogComponent
   ],
   imports: [
     BrowserModule,

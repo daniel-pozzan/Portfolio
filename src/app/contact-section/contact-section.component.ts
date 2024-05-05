@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http'; // Import HttpClient
+import { ContactDialogService } from '../services/contact-dialog.service';
 
 
 @Component({
@@ -17,9 +18,10 @@ export class ContactSectionComponent implements OnInit {
     message: ""
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private contactDialogService: ContactDialogService) { }
 
   ngOnInit(): void {
+
   }
 
   post = {
@@ -35,11 +37,10 @@ export class ContactSectionComponent implements OnInit {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.contactDialogService.open('Thank you for your message! ', 'I will get in touch with you as soon as possible.');
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            alert('Thank you for your message! I will get in contact with you as soon as possible.');
-            document.getElementById('sendedEmail')?.classList.remove('d-none');
+      .subscribe({
+        next: (response) => {
             ngForm.resetForm();
           },
           error: (error) => {
