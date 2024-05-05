@@ -3,7 +3,7 @@
     <div data-aos="zoom-in" class="filter-box">
         <div (click)="getAll()"  (click)="toggleAllIsActive()" [@toggle]="allIsActive" class="filter-element">All</div>
         <div (click)="getAngular()" (click)="toggleAngularIsActive()" [@toggle]="angularIsActive" class="filter-element">Angular</div>
-        <div (click)="getJavascript()" (click)="toggleJavascriptIsActive()" [@toggle]="javascriptIsActive" class="filter-element">Java Script</div>
+        <div (click)="getJavascript()" (click)="toggleJavascriptIsActive()" [@toggle]="javascriptIsActive" class="filter-element">JavaScript</div>
     </div>
     <div class="projects-box">
         <div data-aos="fade-right" class="project-card" *ngIf="javascript" @fadeInOutLeft>
