@@ -6,13 +6,12 @@
     <!-- <form action="https://daniel-pozzan.com/sendMail.php" method="POST"> -->
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
         
-        <label data-aos="fade-right" for="name">Name</label>
-        <input [(ngModel)]="contactData.name" name="name" data-aos="fade-right" id="name" type="text" placeholder="Enter your name" required>
-        <label data-aos="fade-left" for="email">Email adress</label>
-        <input [(ngModel)]="contactData.email" name="email" data-aos="fade-left" id="email" type="email" placeholder="Enter your Email adress" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-        <label data-aos="fade-right" for="message" >Message</label>
-        <textarea #message="ngModel" minlength="6" [(ngModel)]="contactData.message" name="message" data-aos="fade-right" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
-        <span *ngIf="!message.valid && message.touched">Please enter a message</span>
+        <label [ngClass]="{'invalid': !name.valid && name.touched}" data-aos="fade-right" for="name">Name<span *ngIf="!name.valid && name.touched"> - Please enter a name</span></label>
+        <input #name="ngModel" [ngClass]="{'invalid': !name.valid && name.touched}" [(ngModel)]="contactData.name" name="name" data-aos="fade-right" id="name" type="text" placeholder="Enter your name" required>
+        <label [ngClass]="{'invalid': !email.valid && email.touched}"  data-aos="fade-left" for="email">Email adress<span *ngIf="!email.valid && email.touched"> - Please enter a valid email</span></label>
+        <input #email="ngModel" [ngClass]="{'invalid': !email.valid && email.touched}" [(ngModel)]="contactData.email" name="email" data-aos="fade-left" id="email" type="email" placeholder="Enter your Email adress" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <label data-aos="fade-right" for="message" [ngClass]="{'invalid': !message.valid && message.touched}" >Message <span *ngIf="!message.valid && message.touched"> - Please enter a message</span></label>
+        <textarea  #message="ngModel" [ngClass]="{'invalid': !message.valid && message.touched}" [(ngModel)]="contactData.message" name="message" data-aos="fade-right" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
         <div data-aos="fade-left" class="button-box">
             <button type="submit">Send</button>
         </div>

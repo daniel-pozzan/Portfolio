@@ -50,7 +50,7 @@
             width: 612px;
             height: 39px;
             background-color: #1A1A1A;
-            border: none;
+            border: 2px solid transparent;
             outline: none;
             color: #F2F2F2;
             opacity: 0.66;
@@ -61,7 +61,7 @@
         }
         textarea{
             background-color: #1A1A1A;
-            border: none;
+            border: 2px solid transparent;
             outline: none;
             color: #F2F2F2;
             opacity: 0.66;
@@ -78,6 +78,15 @@
             font-size: 18px;
             line-height: 20px;
             color: #F2F2F2;
+
+            span {
+                font-family: 'Inter';
+                font-style: italic;
+                font-weight: 100;
+                font-size: 14px;
+                line-height: 20px;
+                color: #F2F2F2;
+            }
         }
         div{
             display: flex;
@@ -109,6 +118,26 @@
         color: #2DFCD8;
         font-size: 1.5em;
         text-align: center;
+    }
+}
+
+.container {
+    form {
+        label.invalid {
+            color: #2DFCD8;
+
+            span {
+                color: #2DFCD8;
+            }
+        }
+
+        textarea.invalid {
+            border: 2px solid #2DFCD8;
+        }
+
+        input.invalid {
+            border: 2px solid #2DFCD8;
+        }
     }
 }
 
